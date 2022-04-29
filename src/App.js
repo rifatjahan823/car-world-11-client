@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home/Home';
 import InventoryDetails from './Pages/InventoryDetails/InventoryDetails';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import MannageInventory from './Pages/MannageInventory/MannageInventory';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/inventorydetails" element={<InventoryDetails />} />
+      <Route path="/mannageinventory" element={<MannageInventory />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
     </Routes>
