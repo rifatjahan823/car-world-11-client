@@ -28,9 +28,32 @@
 }
 .car{
     position: absolute;
-   left: -5%;
+    left: 0;
     top:16%;
 }
 .car img{
     width: 100%;
 }
+@media  only screen and (max-width:767px) {
+   .shape{
+       height:300px;
+   }
+    .shape img{
+        display: none;
+    }
+    }
+@media  only screen and (max-width:478px) {
+   .shape{
+       height:250px;
+   }
+    }
+@media  only screen and (max-width:412px) {
+   .shape{
+       height:200px;
+   }
+    }
+@media  only screen and (max-width:990px) {
+    .welcome-content h2{
+        font-size: 35px;
+    }
+    }
