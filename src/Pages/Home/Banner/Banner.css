@@ -1,0 +1,11 @@
+.carusel-caption{
+    background-color: rgba(0, 0, 0, 0.457);
+    padding: 30px 0;
+    border-left: 6px solid #FF5B0B;
+}
+@media  only screen and (max-width: 512px) {
+    .carusel-caption{
+        padding:5px;
+    }
+     
+    }
