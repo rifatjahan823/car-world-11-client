@@ -6,15 +6,14 @@ import {getAuth} from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCLwa3EMLLr_zrefKFdpScI8l2AvQu_lk4",
-  authDomain: "cargel-logistic-cargo.firebaseapp.com",
-  projectId: "cargel-logistic-cargo",
-  storageBucket: "cargel-logistic-cargo.appspot.com",
-  messagingSenderId: "490537130269",
-  appId: "1:490537130269:web:18275eae69cb8660cf69f4"
+  apiKey: "AIzaSyBCCdwKEZ8fMN3gO6_BGgDWOjn4NH62ktk",
+  authDomain: "car-world-db4d0.firebaseapp.com",
+  projectId: "car-world-db4d0",
+  storageBucket: "car-world-db4d0.appspot.com",
+  messagingSenderId: "952103649929",
+  appId: "1:952103649929:web:793c54e37161debadf3c58"
 };
 
-// Initialize Firebase
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
