@@ -1,7 +1,7 @@
 [
     {
       "_id": "626c70741972878352beb83a",
-      "picture": "https://i.ibb.co/4YGrc9d/inventory-car-1.jpg",
+      "picture": "https://i.ibb.co/2KHdQ5H/inventory-car-1.jpg",
       "name":"Mercedes-Benz S Class",
       "supplierName": "Atkinson Goff",
       "price":"$42000",
@@ -10,7 +10,7 @@
     },
     {
       "_id": "626c70745d62e559b93e121f",
-      "picture": "https://i.ibb.co/2gzv0Fs/inventory-car-2.jpg",
+      "picture": "https://i.ibb.co/hMMJQ1y/inventory-car-2.jpg",
       "name": " BMW 2 Series Convertible ",
       "supplierName":"Phelps Castaneda",
       "price":"$35000",
@@ -19,7 +19,7 @@
     },
     {
       "_id": "626c7074e42900c150469329",
-      "picture": "https://i.ibb.co/d4qXCmK/inventory-car-3.jpg",
+      "picture": "https://i.ibb.co/PTphRr9/inventory-car-3.jpg",
       "name": "2018 Camry ",
       "supplierName":"",
       "price":"$32000",
@@ -36,7 +36,7 @@
     },
     {
       "_id": "626c7074f1bd5e884bc5332b",
-      "picture": "https://i.ibb.co/HBRWwjs/inventory-car-5.jpg",
+      "picture": "https://i.ibb.co/c6HPBJD/inventory-car-5.jpg",
       "name": "Wilcox Aguilar",
       "price":"$38000",
       "quantity":"10",
@@ -44,7 +44,7 @@
     },
     {
       "_id": "626c70748e3cc0bfa684ca6b",
-      "picture": "https://i.ibb.co/HPD52CN/inventory-car-6.jpg",
+      "picture": "https://i.ibb.co/X4VkMnR/inventory-car-6.jpg",
       "name": "Velez Hensley",
       "price":"$23000",
       "quantity":"10",
