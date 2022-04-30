@@ -1,32 +1,53 @@
 [
     {
       "_id": "626c70741972878352beb83a",
-      "picture": "http://placehold.it/32x32",
-      "name": "Atkinson Goff"
+      "picture": "https://i.ibb.co/4YGrc9d/inventory-car-1.jpg",
+      "name":"Mercedes-Benz S Class",
+      "supplierName": "Atkinson Goff",
+      "price":"$42000",
+      "quantity":"10",
+      "description":"Black Full leather interior, 2 seats, Metallic Imola Grey, We are delighted to offer this stunning Mercedes SLS AMG Roadster for sale. Finished in a very nice AMG colour of Imola Grey with a Black Soft Top and Black Soft Semi Anilin Leather the car is very stylish indeed.This beautiful car benefits from the following equipment : AMG Carbon Fibre Trim; Reversing Camera; Blind Spot Assistant; Auto Dimming Interior & Exterior Mirrors; Electric Seats with Memory; AMG Performance Steering Wheel in Leather & Alcantara; AIRSCARF; Tyre Pressure Monitoring System; AMG Ride Control sports Suspension with Adjustable Damper System; Electric Folding Exterior Mirrors; COMAND APS with DVD Changer; Media Interface; Thermotronic Climate Control; Bi Xenon Headlamps; AMG Polished Alloy Wheels."
     },
     {
       "_id": "626c70745d62e559b93e121f",
-      "picture": "http://placehold.it/32x32",
-      "name": "Huber Calhoun"
+      "picture": "https://i.ibb.co/2gzv0Fs/inventory-car-2.jpg",
+      "name": " BMW 2 Series Convertible ",
+      "supplierName":"Phelps Castaneda",
+      "price":"$35000",
+      "quantity":"10",
+      "description":"Black Full leather interior, 2 seats, Metallic Imola Grey, We are delighted to offer this stunning Mercedes SLS AMG Roadster for sale. Finished in a very nice AMG colour of Imola Grey with a Black Soft Top and Black Soft Semi Anilin Leather the car is very stylish indeed.This beautiful car benefits from the following equipment : AMG Carbon Fibre Trim; Reversing Camera; Blind Spot Assistant; Auto Dimming Interior & Exterior Mirrors; Electric Seats with Memory; AMG Performance Steering Wheel in Leather & Alcantara; AIRSCARF; Tyre Pressure Monitoring System; AMG Ride Control sports Suspension with Adjustable Damper System; Electric Folding Exterior Mirrors; COMAND APS with DVD Changer; Media Interface; Thermotronic Climate Control; Bi Xenon Headlamps; AMG Polished Alloy Wheels."
     },
     {
       "_id": "626c7074e42900c150469329",
-      "picture": "http://placehold.it/32x32",
-      "name": "Liza Mccarty"
+      "picture": "https://i.ibb.co/d4qXCmK/inventory-car-3.jpg",
+      "name": "2018 Camry ",
+      "supplierName":"",
+      "price":"$32000",
+      "quantity":"10",
+      "description":"Black Full leather interior, 2 seats, Metallic Imola Grey, We are delighted to offer this stunning Mercedes SLS AMG Roadster for sale. Finished in a very nice AMG colour of Imola Grey with a Black Soft Top and Black Soft Semi Anilin Leather the car is very stylish indeed.This beautiful car benefits from the following equipment : AMG Carbon Fibre Trim; Reversing Camera; Blind Spot Assistant; Auto Dimming Interior & Exterior Mirrors; Electric Seats with Memory; AMG Performance Steering Wheel in Leather & Alcantara; AIRSCARF; Tyre Pressure Monitoring System; AMG Ride Control sports Suspension with Adjustable Damper System; Electric Folding Exterior Mirrors; COMAND APS with DVD Changer; Media Interface; Thermotronic Climate Control; Bi Xenon Headlamps; AMG Polished Alloy Wheels."
     },
     {
       "_id": "626c70743feedf5b9645c4e8",
-      "picture": "http://placehold.it/32x32",
-      "name": "Phelps Castaneda"
+      "picture": "https://i.ibb.co/MgT5Sr6/inventory-car-4.jpg",
+      "name": "Phelps Castaneda",
+      "price":"$55000",
+      "quantity":"10",
+      "description":""
     },
     {
       "_id": "626c7074f1bd5e884bc5332b",
-      "picture": "http://placehold.it/32x32",
-      "name": "Wilcox Aguilar"
+      "picture": "https://i.ibb.co/HBRWwjs/inventory-car-5.jpg",
+      "name": "Wilcox Aguilar",
+      "price":"$38000",
+      "quantity":"10",
+      "description":""
     },
     {
       "_id": "626c70748e3cc0bfa684ca6b",
-      "picture": "http://placehold.it/32x32",
-      "name": "Velez Hensley"
+      "picture": "https://i.ibb.co/HPD52CN/inventory-car-6.jpg",
+      "name": "Velez Hensley",
+      "price":"$23000",
+      "quantity":"10",
+      "description":""
     }
   ]
