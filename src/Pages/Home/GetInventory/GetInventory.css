@@ -1,7 +1,7 @@
 .getinventory{
     position: relative;
     box-shadow: 0px 0px 3px -1px #ff5500fb;;
-   
+    border-radius: 0 0 5px 5px;
 }
 
 .getinventory img{
@@ -58,6 +58,16 @@
 .quantity p{
     margin-top:18%;
     color: #ff5400;
+}
+.update button{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ff5400;
+    border: 0;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    color:white;
 }
 
 @media  only screen and (max-width:574px) {

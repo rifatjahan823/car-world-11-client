@@ -2,7 +2,7 @@ import React from 'react';
 import car from '../../../image/welcome-section-img/car.png';
 import shape from '../../../image/welcome-section-img/shape.png';
 import carbg from '../../../image/welcome-section-img/car_bg.jpg'
-import './Welcome.css'
+import './Welcome.css';
 
 const Welcome = () => {
     return (
@@ -16,7 +16,7 @@ const Welcome = () => {
             {/*--- welcome-content area ----  */}
             <div className="welcome-content col-md-6 col-sm-12  order-lg-1 order-md-1 order-2">
             <h1>best car WareHouse</h1>
-            <h2>WELCOME TO CAR LISTING PORTAL</h2>
+            <h2>WELCOME TO CARWORLD LISTING PORTAL</h2>
             <p className='pe-5'>CarWorld is the world's leading portal for easy and quick car buying and selling</p>
             </div>
             {/*--- welcome-Image area ----  */}
