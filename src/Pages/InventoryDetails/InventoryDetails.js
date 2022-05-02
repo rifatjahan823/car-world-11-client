@@ -2,20 +2,22 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const InventoryDetails = () => {
+    const [quantity,setQuantity]=useState(0)
     const {Id}=useParams()
     const [inventory,setInventory]=useState([]);
     useEffect(()=>{
         fetch(`http://localhost:5000/inventory/${Id}`)
         .then(res=>res.json())
         .then(data=>setInventory(data))
-    },[])
- 
+    },[quantity])
+
+ //-----updatequantity for restock item---------
     const updateQuantity =event=>{
         event.preventDefault();
         const quantity= event.target.number.value;
         const user = {quantity}
           //send data to the surver
-    fetch(`http://localhost:5000/inventory/${Id}`, {
+    fetch(`http://localhost:5000/inventorie/${Id}`, {
         method: 'PUT', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
@@ -24,7 +26,31 @@ const InventoryDetails = () => {
         })
         .then(response => response.json())
         .then(data => {
-        event.target.reset();
+        
+            const quantity = inventory.quantity;
+            const updateQuantity= quantity;
+            setQuantity(...updateQuantity + quantity)
+        })
+        .catch((error) => {
+        console.error('Error:', error);
+        });
+}
+    const updateDeliver =event=>{
+
+    fetch(`http://localhost:5000/inventory/${Id}`, {
+        method: 'PUT', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(inventory),
+        })
+        .then(response => response.json())
+        .then(data => {
+            const quantity = inventory.quantity;
+            const updateQuantity= quantity-1;
+            console.log(updateQuantity)
+            setQuantity(updateQuantity)
+      
         })
         .catch((error) => {
         console.error('Error:', error);
@@ -39,7 +65,7 @@ const InventoryDetails = () => {
          <input type="submit" value="Updatte" />
        </form>
      {/* ------inventory details----------      */}  
-            <div className='card-group col-md-8 col-sm-12 mx-auto my-3'>
+            <div className='card-group col-lg-8 col-md-9 col-sm-12 mx-auto my-3'>
             <div className='getinventory '>
            <img src={inventory.picture} alt="" />
      {/*------ main-content-part ------------*/}
@@ -61,7 +87,7 @@ const InventoryDetails = () => {
          </div>
       {/*------ button-part ------------*/}
          <div className='update'>
-         <button >Delivered</button>
+         <button onClick={ updateDeliver}>Delivered</button>
          </div>
         </div>
             </div>
