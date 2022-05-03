@@ -31,7 +31,7 @@ const Header = () => {
              {/* //jodi user thake */}
              {
                user && <>
-               <Nav.Link as={Link} to="/addinventory">addinventory</Nav.Link>
+               <Nav.Link as={Link} to="/addinventory">Addinventory</Nav.Link>
                <Nav.Link as={Link} to="/mannageinventory">MannageInventory</Nav.Link>
                <Nav.Link as={Link} to="/myinventory">MyInventory</Nav.Link>
                </>

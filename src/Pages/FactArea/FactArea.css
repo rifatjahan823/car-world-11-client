@@ -1,0 +1,67 @@
+.fact-area:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #1b212e;
+    opacity: .86;
+    z-index: -10;
+}
+.fact-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -15px;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto 0;
+    background: #ff5400;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    padding: 7px 40px;
+}
+.fact-title::before {
+    content: "";
+    position: absolute;
+    left: -19px;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 56% 50%, 0% 0%);
+    background: #ff5400;
+}
+.fact-title::after {
+    content: "";
+    position: absolute;
+    right: -19px;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    clip-path: polygon(100% 0%, 45% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    background: #ff5400;
+}
+.fact-item{
+    text-align: center;
+}
+.fact-icon-area {
+    font-size: 50px;
+    margin-bottom:8px;
+}
+.fact-content-area h3 {
+    font-size: 30px;
+    color: #FE8144;
+    line-height: 1;
+    margin-bottom: 2px;
+    font-weight:800;
+}
+.fact-content-area p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
