@@ -27,7 +27,7 @@ const Header = () => {
                <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
              </Nav>
              
-             
+             <Nav>
              {/* //jodi user thake */}
              {
                user && <>
@@ -36,14 +36,15 @@ const Header = () => {
                <Nav.Link as={Link} to="/myinventory">MyInventory</Nav.Link>
                </>
              }
+             </Nav>
                <div className='d-flex login'>
              {
                user?
                <Link onClick={signout} as={Link} to="" >Sign Out</Link>
                :
-               <Nav.Link as={Link} to="/login">Login</Nav.Link>
+               <Link as={Link} to="/login">Login</Link>
              }
-               <Nav.Link as={Link} to="/register">Register</Nav.Link>
+               <Link as={Link} to="/register">Register</Link>
                </div>
            
             </Navbar.Collapse>
