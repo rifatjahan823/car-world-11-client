@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './Login.css';
+import userimg from '../../../image/social/users-icon.png';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -38,7 +41,7 @@ const Login = () => {
       
 useEffect(()=>{
     if(user){
-        navigate('/home') ;
+        navigate('/') ;
         navigate(from, { replace: true });
     }
 },[user]);
@@ -46,10 +49,18 @@ if(sending){
     return <Loading></Loading>;
   }
     return (
-        <div className='container mx-auto pb-5 form-container'>
-        <h2 className='text-center  mt-2'>Please Login</h2>
+        <div className=' container '>
+            <div className='mx-auto form-container px-3'>
+            <div className='user-img pt-3'>
+            <img  src={userimg} alt="" />
+            </div>
+            <div className='d-flex align-items-center justify-content-center'>
+            <div style={{height:"1px",backgroundColor:"black"}} className=' w-25'></div>
+            <h3 className='mx-2 mt-2'>Login</h3>
+            <div style={{height:"1px",backgroundColor:"black"}} className='w-25'></div>
+        </div>
         <Form onSubmit={submit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group  controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" required/>
             </Form.Group>
@@ -68,7 +79,7 @@ if(sending){
             loading && <Loading></Loading>
             
         }
-            <Button className='w-50 mx-auto d-block mb-2' variant="success " type="submit">
+            <Button style={{backgroundColor:"#FF5400",border:'none'}} className='w-50 mx-auto d-block mb-2' type="submit">
                 Login
             </Button>
         </Form>
@@ -83,7 +94,8 @@ if(sending){
         }
         }}>Reset Password</Link></p>
             <SocialLogin></SocialLogin>
-            <ToastContainer />
+           <ToastContainer />
+         </div>     
     </div>
     );
 };

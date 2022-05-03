@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import userimg from '../../../image/social/users-icon.png';
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -49,10 +50,18 @@ const navigate=useNavigate();
     createUserWithEmailAndPassword(email,password);
   }
     return (
-        <div className='container mx-auto pb-5 form-container'>
-        <h2 className='text-center  mt-2'>Please Registration</h2>
+        <div className='container'>
+          <div className='mx-auto  px-3 form-container'>
+          <div className='user-img pt-3'>
+            <img  src={userimg} alt="" />
+            </div>
+            <div className='d-flex align-items-center justify-content-center'>
+            <div style={{height:"1px",backgroundColor:"black"}} className=' w-25'></div>
+            <h3 className='mx-2 mt-2'>Registration</h3>
+            <div style={{height:"1px",backgroundColor:"black"}} className='w-25'></div>
+        </div>
         <Form onSubmit={registar}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" required/>
             </Form.Group>
@@ -66,12 +75,13 @@ const navigate=useNavigate();
                 <Form.Control onBlur={handleConfirmPassword} type="password" placeholder="ConfirmPassword" required/>
             </Form.Group>
             <p style={{color:"red"}}>{error}</p>
-            <Button className='w-50 mx-auto d-block mb-2' variant="success" type="submit">
+            <Button style={{backgroundColor:"#FF5400",border:'none'}} className='w-50 mx-auto d-block mb-2' variant="success" type="submit">
                Register
             </Button>
         </Form>
         <p>Already have an account? <Link to="/login" className="text-danger pe-auto text-decoration-none">Please Login</Link></p>
         <SocialLogin></SocialLogin>
+        </div>  
     </div>
     );
 };

@@ -9,12 +9,12 @@ const InventoryDetails = () => {
         fetch(`http://localhost:5000/inventory/${Id}`)
         .then(res=>res.json())
         .then(data=>setInventory(data))
-    },[quantity])
+    },[inventory])
 
  //-----updatequantity for restock item---------
     const updateQuantity =event=>{
         event.preventDefault();
-        const quantity= event.target.number.value;
+        const quantity= parseInt(event.target.number.value)+parseInt(inventory.quantity);
         const user = {quantity}
           //send data to the surver
     fetch(`http://localhost:5000/inventorie/${Id}`, {
@@ -27,9 +27,6 @@ const InventoryDetails = () => {
         .then(response => response.json())
         .then(data => {
         
-            const quantity = inventory.quantity;
-            const updateQuantity= quantity;
-            setQuantity(...updateQuantity + quantity)
         })
         .catch((error) => {
         console.error('Error:', error);

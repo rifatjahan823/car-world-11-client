@@ -8,6 +8,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import MannageInventory from './Pages/MannageInventory/MannageInventory';
 import Header from './Pages/Shared/Header/Header';
+import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -16,9 +17,15 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/inventory/:Id" element={<InventoryDetails/>} />
-      <Route path="/mannageinventory" element={<MannageInventory />} />
-      <Route path="/addinventory" element={<AddInventory />} />
+      <Route path="/inventory/:Id" element={ <RequireAuth>
+        <InventoryDetails/>
+      </RequireAuth>} />
+      <Route path="/mannageinventory" element={<RequireAuth>
+        <MannageInventory />
+      </RequireAuth>} />
+      <Route path="/addinventory" element={<RequireAuth>
+        <AddInventory />
+      </RequireAuth>} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
     </Routes>

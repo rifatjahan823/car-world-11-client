@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../Loading/Loading';
@@ -26,17 +27,16 @@ const SocialLogin = () => {
        
     
     return (
-        <div className='mb-5 '>
+        <div className='mb-2 '>
         <div className='d-flex align-items-center'>
-            <div style={{height:"1px",backgroundColor:"#2acd35"}} className=' w-50'></div>
+            <div style={{height:"1px",backgroundColor:"black"}} className=' w-50'></div>
             <p className='mx-2 mt-2'>or</p>
-            <div style={{height:"1px",backgroundColor:"#2acd35"}} className='w-50'></div>
+            <div style={{height:"1px",backgroundColor:"black"}} className='w-50'></div>
         </div>
         <div>
             { errorElement}
-            <button onClick={() => signInWithGoogle()} className=' d-flex align-items-center justify-content-center mx-auto d-block btn btn-success w-75 m-3'>
-                <img style={{width:"30px",}} className="me-2" src={google} alt="" />
-                <span>Sign in with google</span>
+            <button className='btn' onClick={() => signInWithGoogle()} >
+                <img style={{width:"10%",margin:"0 auto",border:"none"}} className=" " src={google} alt="" />
             </button>
         </div>
     </div>
