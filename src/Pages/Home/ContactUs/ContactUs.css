@@ -1,0 +1,20 @@
+.contact-icon{
+    background-color: #B18F6A;
+    position: relative;
+    height: 110px;
+}
+.contact-icon::after{
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-color: #B18F6A;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    margin-right: -8px;
+    margin-top: -8.5px;
+}
+.contact-info{
+    height: 110px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCarAlt,faCarSide,faGear,faRocket} from '@fortawesome/free-solid-svg-icons';
-import factbg from '../../image/fact-area-img/fact_bg.jpg';
+import factbg from '../../../image/fact-area-img/fact_bg.jpg';
 import './FactArea.css'
 
 const FactArea = () => {

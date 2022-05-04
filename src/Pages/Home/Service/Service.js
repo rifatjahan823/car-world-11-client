@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCarOn} from '@fortawesome/free-solid-svg-icons';
 import './Service.css'
-import shape from '../../image/welcome-section-img/shape.png';
-import car from '../../image/welcome-section-img/car.png'
+import shape from '../../../image/welcome-section-img/shape.png';
+import car from '../../../image/welcome-section-img/car.png'
 
 
 const Service = () => {
