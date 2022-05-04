@@ -20,7 +20,7 @@ const FactArea = () => {
                             </div>
                             <div className='fact-content-area'>
                                 <h3>25000+</h3>
-                                <p>new car in stock</p>
+                                <p>new cars in stock</p>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const FactArea = () => {
                             </div>
                             <div className='fact-content-area'>
                                 <h3>25000+</h3>
-                                <p>new car in stock</p>
+                                <p>used cars in stock</p>
                             </div>
                         </div>
                     </div> 
@@ -44,7 +44,7 @@ const FactArea = () => {
                             </div>
                             <div className='fact-content-area'>
                                 <h3>25000+</h3>
-                                <p>new car in stock</p>
+                                <p>service center</p>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const FactArea = () => {
                             </div>
                             <div className='fact-content-area'>
                                 <h3>25000+</h3>
-                                <p>new car in stock</p>
+                                <p>happy clients</p>
                             </div>
                         </div>
                     </div>    

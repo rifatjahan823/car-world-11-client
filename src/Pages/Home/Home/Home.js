@@ -1,8 +1,8 @@
 import React from 'react';
 import FactArea from '../../FactArea/FactArea';
+import Service from '../../Service/Service';
 import Banner from '../Banner/Banner';
 import Inventory from '../Inventory/Inventory';
-import Testimonial from '../Testimonial/Testimonial';
 import Welcome from '../Welcome/Welcome';
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
             <Welcome></Welcome>
             <Inventory></Inventory>
             <FactArea></FactArea>
-            <Testimonial></Testimonial>
+           <Service></Service>
         </div>
     );
 };

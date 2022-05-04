@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Testimonial = () => {
+const ContactUs = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Testimonial = () => {
     );
 };
 
-export default Testimonial;
+export default ContactUs;

@@ -59,9 +59,11 @@
     line-height: 1;
     margin-bottom: 2px;
     font-weight:800;
+    text-transform: capitalize;
 }
 .fact-content-area p {
     color: #fff;
     font-size: 14px;
     font-weight: 600;
+    text-transform: capitalize;
 }

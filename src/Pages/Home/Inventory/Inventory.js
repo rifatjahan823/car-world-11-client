@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import GetInventory from '../GetInventory/GetInventory';
 import './Inventory.css';
-import titleline from '../../../image/title_line.png'
 
 const Inventory = () => {
     const [inventories,setInventories]=useState([]);
@@ -14,8 +13,13 @@ const Inventory = () => {
     return (
         <div id="inventory" className='inventory-section'>
             <h2 className='text-uppercase text-center'>our inventories</h2>
-            <div className='title-line pb-5'>
-                <img src={titleline} alt="" />
+            <div className=' pb-5'>
+            <div className='title-border'>
+                    <div className='title-border-inner'></div>
+                    <div className='title-border-inner'></div>
+                    <div className='title-border-inner'></div>
+                    <div className='title-border-inner'></div>
+                </div>
             </div>
           <div  className='container'>
             <div className='row g-4'>
