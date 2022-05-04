@@ -1,0 +1,29 @@
+.carousel-indicators [data-bs-target] {
+ display: none;
+  
+}
+.carussel {
+  background-color:white;
+  padding: 80px 0;
+}
+.carousel-content{
+    width:60%;
+    padding:30px 0;
+    margin: 0 auto;
+    color:black;
+    height: 190px;
+ 
+}
+.carousel-content img{
+        width: 90px;
+        height: 90px;
+    border-radius: 100%;
+    border: 5px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+       
+}
+
+.content p{
+    margin-top:12px;
+    text-transform: capitalize;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCarAlt,faCarSide,faGear,faRocket} from '@fortawesome/free-solid-svg-icons';
 import factbg from '../../../image/fact-area-img/fact_bg.jpg';
+import CountUp from 'react-countup';
 import './FactArea.css'
 
 const FactArea = () => {
@@ -19,8 +20,8 @@ const FactArea = () => {
                                   <FontAwesomeIcon icon={faCarAlt} />
                             </div>
                             <div className='fact-content-area'>
-                                <h3>25000+</h3>
-                                <p>new cars in stock</p>
+                                <h3> <CountUp end={27000} duration={5}/>+</h3>
+                                <p>new cars in stock </p>
                             </div>
                         </div>
                     </div>
@@ -31,7 +32,7 @@ const FactArea = () => {
                                  <FontAwesomeIcon icon={faCarSide} />
                             </div>
                             <div className='fact-content-area'>
-                                <h3>25000+</h3>
+                                <h3><CountUp end={20000} duration={5}/>+</h3>
                                 <p>used cars in stock</p>
                             </div>
                         </div>
@@ -43,7 +44,7 @@ const FactArea = () => {
                                  <FontAwesomeIcon icon={faGear} />
                             </div>
                             <div className='fact-content-area'>
-                                <h3>25000+</h3>
+                                <h3><CountUp end={35000} duration={5}/>+</h3>
                                 <p>service center</p>
                             </div>
                         </div>
@@ -55,7 +56,7 @@ const FactArea = () => {
                                  <FontAwesomeIcon icon={faRocket} />
                             </div>
                             <div className='fact-content-area'>
-                                <h3>25000+</h3>
+                                <h3><CountUp end={12000} duration={5}/>+</h3>
                                 <p>happy clients</p>
                             </div>
                         </div>

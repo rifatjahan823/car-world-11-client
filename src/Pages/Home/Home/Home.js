@@ -4,17 +4,20 @@ import Service from '../Service/Service';
 import Banner from '../Banner/Banner';
 import Inventory from '../Inventory/Inventory';
 import Welcome from '../Welcome/Welcome';
-import ContactUs from '../ContactUs/ContactUs';
+import Testimonial from '../Testimonial/Testimonial';
+
+
+
 
 const Home = () => {
     return (
-        <div>
+        <div  >
             <Banner></Banner>
             <Welcome></Welcome>
             <Inventory></Inventory>
             <FactArea></FactArea>
            <Service></Service>
-           <ContactUs></ContactUs>
+           <Testimonial></Testimonial>
         </div>
     );
 };

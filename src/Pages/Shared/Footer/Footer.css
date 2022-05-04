@@ -1,0 +1,28 @@
+.footer{
+    background-color: #222426;
+    color:#e1e2e4;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: Open Sans;
+}
+.footer h5{
+    color:#2ACD2F;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+}
+.info-2 p{
+margin: 0;
+}
+.pages li{
+    color: #84898b;
+    cursor: pointer;
+}
+.pages li:hover{
+    color: #e1e2e4;
+}
+.footre-botton{
+    background-color: #2E3134;
+    color: #888888;
+    padding: 15px 0;
+    text-align: center
+}

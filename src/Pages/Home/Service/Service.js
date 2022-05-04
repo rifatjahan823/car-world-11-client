@@ -8,7 +8,7 @@ import car from '../../../image/welcome-section-img/car.png'
 
 const Service = () => {
     return (
-        <div className='service'>
+        <div className='service pb-5'>
             <div className='container'>
                 <h4>our service Cars</h4>
                 <h2>Exclusive WareHouse Featured</h2>
