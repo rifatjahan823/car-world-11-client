@@ -3,12 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCarOn} from '@fortawesome/free-solid-svg-icons';
 import './Service.css'
 import shape from '../../../image/welcome-section-img/shape.png';
-import car from '../../../image/welcome-section-img/car.png'
+import car from '../../../image/welcome-section-img/car.png';
+import carbg from '../../../image/welcome-section-img/car_bg.jpg'
 
 
 const Service = () => {
     return (
-        <div className='service pb-5'>
+        <div className='service pb-5'style={{backgroundImage: `url(${carbg})`, backgroundRepeat: "no-repeat",
+        backgroundSize:"cover",
+     
+       }}>
             <div className='container'>
                 <h4>our service Cars</h4>
                 <h2>Exclusive WareHouse Featured</h2>

@@ -1,10 +1,10 @@
 .carousel-indicators [data-bs-target] {
- display: none;
-  
-}
+  display: none;
+ }
+
 .carussel {
   background-color:white;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 .carousel-content{
     width:60%;
