@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import {  useNavigate } from 'react-router-dom';
-import './MannageInventory.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate} from 'react-router-dom';
+import auth from '../../firebase.init';
 
-const MannageInventory = () => {
-    const [inventories,setInventories]=useState([]);
+const MyInventory = () => {
+    const [user]= useAuthState(auth)
+    const [inventory,setInventory]=useState([]);
+
     useEffect(()=>{
-        fetch('http://localhost:5000/inventory')
-        .then(res=>res.json())
-        .then(data=>setInventories(data))
-    },[])
-
+        const email = user.email
+     fetch(`http://localhost:5000/myinventory?email=${email}`)
+     .then(res=>res.json())
+     .then(data=>setInventory(data,{
+         headers:{
+           
+         }
+     }));
+ },[user]);
+ 
     const inventoryDelete = id =>{
         const proceed= window.confirm('are you sure');
         if(proceed){
@@ -18,19 +26,22 @@ const MannageInventory = () => {
             })
             .then(res=>res.json())
             .then(data=>{
-               const remaing = inventories.filter(service=>service._id!==id) 
-               setInventories(remaing) 
+               const remaing = inventory.filter(service=>service._id!==id) 
+               setInventory(remaing) 
             })
-        }
+        };
+    
+
     }
+
     return (
-        <div id="inventory" className='inventory-section'>
-            <h2 className='text-uppercase text-center pb-5'>All inventories</h2>
-          <div  className='container'> 
+        <div>
+            <h2>Your Orders{inventory.length}</h2>
+            <div  className='container'> 
           <div  className='row g-4'> 
             {
             
-            inventories.map(inventory=><GetMannageInventory
+            inventory.map(inventory=><GetMannageInventory
             inventory={inventory}
             key={inventory._id}
             inventoryDelete={inventoryDelete}>
@@ -41,10 +52,10 @@ const MannageInventory = () => {
         </div>
     );
 };
-
-
 const GetMannageInventory = ({inventory,inventoryDelete}) => {
+    
     const {name,picture,price,quantity,_id}=inventory;
+   
     const navigate = useNavigate();
     const getinventoryDetails=()=>{
         navigate(`/inventory/${_id}`)
@@ -65,6 +76,4 @@ const GetMannageInventory = ({inventory,inventoryDelete}) => {
     )
 };
 
-
-
-export default MannageInventory;
+export default MyInventory;

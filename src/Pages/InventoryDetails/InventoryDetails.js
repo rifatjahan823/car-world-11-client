@@ -56,39 +56,46 @@ const InventoryDetails = () => {
 
     return (
         <div className='container'>
-       {/* ------form part for restock items----------      */}
-       <form onSubmit={updateQuantity}>
-       <input  type="number"  name="number" id="" placeholder='Number' required/><br />
-         <input type="submit" value="Updatte" />
-       </form>
-     {/* ------inventory details----------      */}  
-            <div className='card-group col-lg-8 col-md-9 col-sm-12 mx-auto my-3'>
-            <div className='getinventory '>
-           <img src={inventory.picture} alt="" />
-     {/*------ main-content-part ------------*/}
-         <div className='px-2'>
-       {/*------ top-content-part ------------*/}       
-         <div className='border-bottom pt-5'>   
-          <div className='top-part d-flex justify-content-between align-items-center flex-wrap'>
-          <h3>{inventory.name}</h3>
-           <p>{inventory.price}</p>
+      {/* ------form part for restock items----------      */}
+          <form className='text-center mt-5' onSubmit={updateQuantity}>
+              <input  type="number"  name="number" id="" placeholder='Number' required/>
+              <input type="submit" value="Updatte" />
+          </form>
+      {/* ------inventory details----------      */} 
+      <div className='border border-secondary my-5 p-3 '> 
+        <div className='row  g-4  align-items-center '>
+    
+       {/* ------inventory image----------      */}     
+          <div class="col-12 col-lg-5 col-md-5 ">
+              <img className='img-fluid' src={inventory.picture} alt="" />
           </div>
-            <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>SupplierName :</span> {inventory.supplierName}</p>
-          </div>
-           {/*------ description-part ------------*/}
-            <p className='pt-2 pb-5' style={{color:"#565656",fontSize: "14px",fontWeight: "600"}}>{inventory.description}</p>
-         {/*------ quantity-part ------------*/} 
-           <div className='quantity'>
-           <p>Quantity<br></br>{inventory.quantity}</p>
-           </div>
-         </div>
-      {/*------ button-part ------------*/}
-         <div className='update'>
-         <button onClick={ updateDeliver}>Delivered</button>
-         </div>
-        </div>
-            </div>
-       </div>
+        {/* ------inventory content----------      */} 
+        <div class="col-12 col-lg-7 col-md-7 ">
+        <div className='card-body'>
+           <h3>{inventory.name}</h3>
+           <p>ID:{inventory._id}</p>
+         {/*------  price ------------*/} 
+         <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Price :</span> {inventory.price}</p> 
+        {/*------ quantity ------------*/} 
+        {
+          inventory.quantity>0?
+          <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Quantity :</span> {inventory.quantity}</p>
+          :
+          <p style={{color:"red",fontWeight: "700"}}>Sold</p>
+        } 
+           {/*------ supperlair name ------------*/} 
+           <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>SupplierName :</span> {inventory.supplierName}</p> 
+         {/*------ description-part ------------*/}
+           <p className='pt-2 pb-2' style={{color:"#565656",fontSize: "14px",fontWeight: "600"}}>{inventory.description}</p>
+        {/*------ button-part ------------*/}
+         <div className=''>
+           <button onClick={ updateDeliver}>Delivered</button>
+         </div>  
+        </div>  
+        </div>    
+      </div>
+      </div>
+      </div>
     );
 };
 

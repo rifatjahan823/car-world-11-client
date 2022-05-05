@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../Loading/Loading';
 import google from '../../../image/social/google-icon-logo.png'
@@ -16,15 +16,21 @@ const SocialLogin = () => {
             <p>Error: {error?.message}</p>
           </div>
       }
+      const location = useLocation();
+      const from = location.state?.from?.pathname || "/";
+
+      useEffect(()=>{
+        if(user){
+            navigate('/') ;
+            navigate(from, { replace: true });
+        }
+    },[user]);
+
       if (loading ) {
         return <Loading></Loading>;
       };
-   
-        if(user ){
-          navigate ('/')
-        }
-      
-       
+    
+    
     
     return (
         <div className='mb-2 '>
