@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import GetInventory from '../GetInventory/GetInventory';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDoubleRight} from '@fortawesome/free-solid-svg-icons';
 import './Inventory.css';
 
 const Inventory = () => {
@@ -9,9 +12,12 @@ const Inventory = () => {
         .then(res=>res.json())
         .then(data=>setInventories(data))
     },[])
-
+    const navigate = useNavigate();
+    const mannageInventory=()=>{
+     navigate(`/mannageinventory`)
+    }
     return (
-        <div id="inventory" className='inventory-section'>
+        <div className='inventory-section'>
             <h2 className='text-uppercase text-center'>our inventories</h2>
             <div className=' pb-5'>
             <div className='title-border'>
@@ -29,6 +35,9 @@ const Inventory = () => {
                 key={inventory._id}
                 ></GetInventory>)
             }
+            <div className='button'>
+            <button onClick={mannageInventory}>mannage inventory <FontAwesomeIcon icon={faAngleDoubleRight} /></button>
+            </div>
             </div>
           </div>
         </div>

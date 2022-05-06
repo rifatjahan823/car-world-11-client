@@ -26,14 +26,11 @@ const GetInventory = ({inventory}) => {
             <p className='pt-2 pb-5' style={{color:"#565656",fontSize: "14px",fontWeight: "600"}}>{description?.slice(0,130)}.....</p>
          {/*------ quantity-part ------------*/} 
            {
-             quantity?
+       
              <div className='quantity'>
              <p>Quantity<br></br>{quantity}</p>
              </div>
-             :
-             <div className='quantity'>
-             <p style={{color:"red",fontWeight: "700"}}>Sold</p>
-             </div>
+ 
            }
          </div>
       {/*------ button-part ------------*/}

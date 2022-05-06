@@ -23,12 +23,8 @@ const Header = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
              <Nav className="mx-auto">
              <Nav.Link as={Link} to="/">Home</Nav.Link>
-               <Nav.Link href='/#inventory' >Inventory</Nav.Link>
                <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-             </Nav>
-             
-             <Nav>
-             {/* //jodi user thake */}
+                {/* //jodi user thake */}
              {
                user && <>
                <Nav.Link as={Link} to="/addinventory">Addinventory</Nav.Link>
@@ -36,7 +32,9 @@ const Header = () => {
                <Nav.Link as={Link} to="/myinventory">MyInventory</Nav.Link>
                </>
              }
+            
              </Nav>
+             
                <div className='d-flex login'>
              {
                user?

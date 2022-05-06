@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const InventoryDetails = () => {
-    const [quantity,setQuantity]=useState(0)
     const {Id}=useParams()
     const [inventory,setInventory]=useState([]);
     useEffect(()=>{
@@ -33,25 +32,28 @@ const InventoryDetails = () => {
         });
 }
     const updateDeliver =event=>{
-
-    fetch(`http://localhost:5000/inventory/${Id}`, {
-        method: 'PUT', // or 'PUT'
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(inventory),
-        })
-        .then(response => response.json())
-        .then(data => {
-            const quantity = inventory.quantity;
-            const updateQuantity= quantity-1;
-            console.log(updateQuantity)
-            setQuantity(updateQuantity)
+      const quantity = inventory.quantity-1;
+      const sold = inventory.sold+1;
+      const user = {quantity,sold};
+  
+  
+   
+        //send data to the surver
+  fetch(`http://localhost:5000/inventorie/${Id}`, {
+      method: 'PUT', // or 'PUT'
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+      })
+      .then(response => response.json())
+      .then(data => {
       
-        })
-        .catch((error) => {
-        console.error('Error:', error);
-        });
+      })
+      .catch((error) => {
+      console.error('Error:', error);
+      });
+   
 }
 
     return (
@@ -76,12 +78,14 @@ const InventoryDetails = () => {
            <p>ID:{inventory._id}</p>
          {/*------  price ------------*/} 
          <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Price :</span> {inventory.price}</p> 
+         {/*------  sold ------------*/} 
+         <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Sold :</span> {inventory.sold}</p> 
         {/*------ quantity ------------*/} 
         {
-          inventory.quantity>0?
+      
           <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Quantity :</span> {inventory.quantity}</p>
-          :
-          <p style={{color:"red",fontWeight: "700"}}>Sold</p>
+       
+        
         } 
            {/*------ supperlair name ------------*/} 
            <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>SupplierName :</span> {inventory.supplierName}</p> 

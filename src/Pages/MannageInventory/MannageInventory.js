@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {  useNavigate } from 'react-router-dom';
-import './MannageInventory.css'
+import './MannageInventory.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDoubleRight,faDeleteLeft,faEdit} from '@fortawesome/free-solid-svg-icons';
+import thumnail from '../../image/Mannageinvetory-page-img/pexels-photo-120049.jpg'
 
 const MannageInventory = () => {
     const [inventories,setInventories]=useState([]);
@@ -23,11 +26,23 @@ const MannageInventory = () => {
             })
         }
     }
+    const navigate = useNavigate();
+    const addInventory=()=>{
+     navigate(`/addinventory`)
+    }
     return (
-        <div id="inventory" className='inventory-section'>
-            <h2 className='text-uppercase text-center pb-5'>All inventories</h2>
+        <div  className=''>
+             <div className='mannage-inventory' style={{backgroundImage: `url(${thumnail})`, backgroundPosition:"center",backgroundSize:"cover",backgroundRepeat:"no-repeat",position:"relative",color:'white',zIndex:'5',padding:"100px 0",backgroundAttachment:"fixed",}}>
+             <h2 className='text-uppercase text-center fw-bolder'>All <span style={{color:"#FF5400"}}>inven</span>tories</h2>
+             <div className='button'>
+            <button onClick={addInventory}>add inventory <FontAwesomeIcon icon={faAngleDoubleRight} /></button>
+            </div>
+            </div>
+            <div  style={{borderTop:"5px solid #FF5400"}}>
+          
+            </div>
           <div  className='container'> 
-          <div  className='row g-4'> 
+          <div  className='row g-4 mt-3'> 
             {
             
             inventories.map(inventory=><GetMannageInventory
@@ -58,8 +73,8 @@ const GetMannageInventory = ({inventory,inventoryDelete}) => {
           <h3 style={{fontSize:"18px",fontWeight:"600"}}>{name}</h3>
           <p style={{margin:'0',fontSize:"16px",fontWeight:"600"}}>${price}</p>
           <p className='pb-2' style={{fontSize:"16px",fontWeight:"600"}}>Quantity:{quantity}</p>
-          <button  className='btn btn-danger'  onClick={()=>inventoryDelete(inventory._id)}>Delete</button>
-          <button onClick={getinventoryDetails}>Update</button>
+          <button  className='btn btn-danger me-5'  onClick={()=>inventoryDelete(inventory._id)}><FontAwesomeIcon icon={faDeleteLeft } /></button>
+          <button className='edit-btn' onClick={getinventoryDetails}><FontAwesomeIcon icon={faEdit} /></button>
         </div>
        </div>
     )

@@ -32,3 +32,26 @@
         transform: translate(20px, 0);
     }
 }
+.button {
+   text-align: center;
+
+}
+.button button{
+   background-color:#FE8144 ;
+   color:white;
+   border: 1.5px solid #FF5400;
+   border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+ font-weight: 700;
+ line-height: 1;
+padding: 21px 23px;
+text-transform: uppercase;
+transition: all 0.3s ease 0s;
+white-space: nowrap;
+margin-top: 30px;
+}
+.button button:hover{
+    background-color: #FF5400;
+   border: 1.5px solid #FE8144; 
+}

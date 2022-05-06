@@ -1,56 +1,62 @@
 [
     {
-      "_id": "626c70741972878352beb83a",
+
       "picture": "https://i.ibb.co/2KHdQ5H/inventory-car-1.jpg",
       "name":"Mercedes-Benz S Class",
       "supplierName": "Bassel",
       "price":"42000",
       "quantity":"10",
+      "sold":"3",
       "description":"Black Full leather interior, 2 seats, Metallic Imola Grey, We are delighted to offer this stunning Mercedes SLS AMG Roadster for sale. Finished in a very nice AMG colour of Imola Grey with a Black Soft Top and Black Soft Semi Anilin Leather the car is very stylish indeed.This beautiful car benefits from the following equipment : AMG Carbon Fibre Trim; Reversing Camera; Blind Spot Assistant; Auto Dimming Interior & Exterior Mirrors; Electric Seats with Memory; AMG Performance Steering Wheel in Leather & Alcantara; AIRSCARF; Tyre Pressure Monitoring System; AMG Ride Control sports Suspension with Adjustable Damper System; Electric Folding Exterior Mirrors; COMAND APS with DVD Changer; Media Interface; Thermotronic Climate Control; Bi Xenon Headlamps; AMG Polished Alloy Wheels."
     },
     {
-      "_id": "626c70745d62e559b93e121f",
+
       "picture": "https://i.ibb.co/hMMJQ1y/inventory-car-2.jpg",
       "name": " BMW 2 Series Convertible ",
       "supplierName":"Phelps Castaneda",
       "price":"35000",
       "quantity":"10",
+      "sold":"3",
       "description":"High-quality, stylish materials are used in the interior. The steering wheel rim, gear lever/selector and door pull inlays are finished in leather. The refined tone is enhanced by silver-coloured details, such as those found on the dashboard trim strip, the side and centre air vent surrounds and the centre console. Lean, muscular and athletic, the car has inherited motorsport genes. They are characteristic of the Porsche family and vital to the irresistible appeal of the sports car. They are traits that make the Boxster the sports star among roadsters. Dynamic performance, whether the hood is open or closed, has become synonymous with driving pleasure."
     },
     {
-      "_id": "626c7074e42900c150469329",
+
       "picture": "https://i.ibb.co/PTphRr9/inventory-car-3.jpg",
       "name": "2018 Camry ",
       "supplierName":"Walker",
       "price":"32000",
       "quantity":"10",
+      "sold":"3",
       "description":"The 2018 Camry LP 720-4 50° Anniversario is a limited (200 units – 100 Coupe and 100 Roadster) version of the Aventador LP 700-4 commemorating the 50th anniversary of Automobili Lamborghini. It included increased engine power to 720 PS (530 kW; 710 bhp) via a new specific engine calibration, enlarged and extended front air intakes and the aerodynamic splitter, small flaps set into the sides, new rear end featuring an enlarged diffuser and expansive meshwork that further improves engine-compartment ventilati"
     },
     {
-      "_id": "626c70743feedf5b9645c4e8",
+
       "picture": "https://i.ibb.co/MgT5Sr6/inventory-car-4.jpg",
       "supplierName":"Robert",
       "name": "Audi Quattro '2012",
       "price":"55000",
       "quantity":"10",
+      "sold":"3",
       "description":"Audi Quattro '2012 Concept plug-in hybrid electric vehicle includes an electric motor located in the front axle powering the front wheels rated 96 kW (131 PS; 129 hp) and 250 N·m (184 lb·ft), a turbocharged 1.5-liter 3-cylinder gasoline engine driving rear wheels rated 164 kW (223 PS; 220 hp) and 300 N·m (221 lb·ft) of torque, with combined output of 260 kW (354 PS; 349 hp) and (Corsican). Together with the positioning of the motor and engine over the axles, the result is an optimum 50/50 weight distribution."
     },
     {
-      "_id": "626c7074f1bd5e884bc5332b",
+
       "picture": "https://i.ibb.co/c6HPBJD/inventory-car-5.jpg",
       "name": "Nissan",
       "supplierName":"Wilcox Aguilar",
       "price":"38000",
       "quantity":"10",
+      "sold":"3",
       "description":"Wilcox Aguilar debuted the 6th generation of quattro in the 2010 RS5. The key change in generation VI is the replacement of the Torsen Type “C” centre differential with an Audi-developed “Crown Gear” differential. With the new “Crown Gear” center differential, up to 70% of the torque can be applied to the front wheels while up to 85% can be applied to the rear wheels if necessary. The net result of this advance in quattro is the ability of the vehicle electronics to fully manage the vehicle dynamics in all traction situations, whether in cornering, acceleration, braking, snow or in any combination of these. This system was later adopted by the A7, latest generation of the A6 and A8."
     },
     {
-      "_id": "626c70748e3cc0bfa684ca6b",
+  
       "picture": "https://i.ibb.co/X4VkMnR/inventory-car-6.jpg",
       "name": "Honda NSX '2013",
       "supplierName":"Velez Hensley",
       "price":"23000",
       "quantity":"10",
+      "sold":"3",
       "description":"In December 2007, American Honda CEO, Tetsuo Iwamura, confirmed a new supercar powered by a V10 engine would make its introduction to the market by 2010.[39] The new sports car would be based on the Acura ASCC (Advanced Sports Car Concept) introduced at the 2007 North American International Auto Show.[40] With Honda CEO Takeo Fukui challenging the developers to make the vehicle faster than its rivals,[41] prototypes of the vehicle were seen testing on the Nürburgring in June 2008.[42] On 17 December 2008, Fukui announced during a speech about Honda’s revised financial forecast that, due to poor economic conditions, all plans for a next-generation NSX had been cancelled.[43] In March 2010, the Acura NSX project changed name to Honda HSV-010 GT and was entered in the Japanese SuperGT Championship. The HSV-010 GT is powered by a 3.4-liter V8 sending somewhere in excess of 500 hp (373 kW) through the sequential manual gearbox from Ricardo."
     }
   ]
