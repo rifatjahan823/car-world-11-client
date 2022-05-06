@@ -10,6 +10,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 import userimg from '../../../image/social/users-icon.png';
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -29,22 +30,34 @@ const Login = () => {
       const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(
       auth
       );
-     
-      const submit = event=>{
+
+      const submit = async event=>{
         event.preventDefault();
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+            const url = 'http://localhost:5000/login';
+            fetch(url, {
+              method: 'POST',
+              body: JSON.stringify({
+                  email:email
+              }),
+              headers: {
+                  'Content-type': 'application/json; charset=UTF-8',
+              },
+          })
+              .then((response) => response.json())
+              .then((data) => {
+                  localStorage.setItem("accessToken",data.accessToken);
+                  navigate(from, { replace: true });
+              });
     }
     const navigate = useNavigate();
 
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
       
-useEffect(()=>{
-    if(user){
-        navigate('/') ;
-        navigate(from, { replace: true });
-    }
-},[user]);
+// useEffect(()=>{
+//  },[user]);
+
 if(sending){
     return <Loading></Loading>;
   }

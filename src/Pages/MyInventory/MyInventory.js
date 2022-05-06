@@ -5,20 +5,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faDeleteLeft,faEdit} from '@fortawesome/free-solid-svg-icons';
 import auth from '../../firebase.init';
 import thumnail from '../../image/Mannageinvetory-page-img/pexels-photo-120049.jpg'
+import axios from 'axios';
 
 const MyInventory = () => {
     const [user]= useAuthState(auth)
     const [inventory,setInventory]=useState([]);
 
     useEffect(()=>{
-        const email = user.email
-     fetch(`http://localhost:5000/inventorys?email=${email}`)
-     .then(res=>res.json())
-     .then(data=>setInventory(data,{
-         headers:{
-           
-         }
-     }));
+       const getInventory =async ()=>{
+        const email = user.email;
+        const url =(`http://localhost:5000/inventorys?email=${email}`);
+        const {data }= await axios.get(url,{
+            headers:{
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+             }
+        });
+        setInventory(data);
+       
+        }
+        getInventory()
  },[user]);
  
     const inventoryDelete = id =>{
@@ -46,15 +51,13 @@ const MyInventory = () => {
             </div>
             <div  className='container'> 
           <div  className='row g-4 my-3'> 
-            {
-            
-             inventory.map(inventory=><GetMannageInventory
-                inventory={inventory}
-                key={inventory._id}
-                inventoryDelete={inventoryDelete}>
-                </GetMannageInventory>)
-                
-            }
+           {
+                 inventory.map(inventory=><GetMannageInventory
+                    inventory={inventory}
+                    key={inventory._id}
+                    inventoryDelete={inventoryDelete}>
+                    </GetMannageInventory>) 
+           }
           </div>
           </div>
         </div>
@@ -75,7 +78,12 @@ const GetMannageInventory = ({inventory,inventoryDelete}) => {
           </div>
           <h3 style={{fontSize:"18px",fontWeight:"600"}}>{name}</h3>
           <p style={{margin:'0',fontSize:"16px",fontWeight:"600"}}>${price}</p>
+          {
+        inventory.quantity<=0?
+        <p style={{color:"red",fontWeight: "600"}}>Sold Out</p>
+          :
           <p className='pb-2' style={{fontSize:"16px",fontWeight:"600"}}>Quantity:{quantity}</p>
+          }
           <button  className='btn btn-danger me-5'  onClick={()=>inventoryDelete(inventory._id)}><FontAwesomeIcon icon={faDeleteLeft } /></button>
           <button className='edit-btn' onClick={getinventoryDetails}><FontAwesomeIcon icon={faEdit} /></button>
         </div>

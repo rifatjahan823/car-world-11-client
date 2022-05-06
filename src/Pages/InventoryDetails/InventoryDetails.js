@@ -36,8 +36,7 @@ const InventoryDetails = () => {
 }
     const updateDeliver =event=>{
       const quantity = inventory.quantity-1;
-      const sold = inventory.sold+1;
-      const user = {quantity,sold};
+      const user = {quantity};
    
         //send data to the surver
   fetch(`http://localhost:5000/inventorie/${Id}`, {
@@ -92,9 +91,7 @@ const InventoryDetails = () => {
            <p>ID:{inventory._id}</p>
          {/*------  price ------------*/} 
          <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Price :</span> {inventory.price}</p> 
-         {/*------  sold ------------*/} 
 
-         <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Sold :</span> {inventory.sold}</p> 
         {/*------ quantity ------------*/} 
         {
         inventory.quantity<=0?

@@ -8,7 +8,7 @@ import logo from '../../../image/logo/car.png';
 import './Header.css'
 
 const Header = () => {
-    const [user]=useAuthState(auth)
+    const [user]=useAuthState(auth);
     const signout = () => {
       signOut(auth);
     };
@@ -38,7 +38,7 @@ const Header = () => {
                <div className='d-flex login'>
              {
                user?
-               <Link onClick={signout} as={Link} to="" >Sign Out</Link>
+               <Link onClick={signout} as={Link} to="" >Sign Out </Link>
                :
                <Link as={Link} to="/login">Login</Link>
              }

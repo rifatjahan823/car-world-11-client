@@ -72,7 +72,12 @@ const GetMannageInventory = ({inventory,inventoryDelete}) => {
           </div>
           <h3 style={{fontSize:"18px",fontWeight:"600"}}>{name}</h3>
           <p style={{margin:'0',fontSize:"16px",fontWeight:"600"}}>${price}</p>
+          {
+        inventory.quantity<=0?
+        <p style={{color:"red",fontWeight: "600"}}>Sold Out</p>
+          :
           <p className='pb-2' style={{fontSize:"16px",fontWeight:"600"}}>Quantity:{quantity}</p>
+            }
           <button  className='btn btn-danger me-5'  onClick={()=>inventoryDelete(inventory._id)}><FontAwesomeIcon icon={faDeleteLeft } /></button>
           <button className='edit-btn' onClick={getinventoryDetails}><FontAwesomeIcon icon={faEdit} /></button>
         </div>

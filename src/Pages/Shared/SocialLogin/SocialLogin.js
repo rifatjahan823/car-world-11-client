@@ -8,6 +8,7 @@ import google from '../../../image/social/google-icon-logo.png'
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+ 
     const navigate = useNavigate();
     let errorElement;
     if (error ) {
@@ -21,9 +22,22 @@ const SocialLogin = () => {
 
       useEffect(()=>{
         if(user){
-            navigate('/') ;
-            navigate(from, { replace: true });
-        }
+          const url = 'http://localhost:5000/login';
+          fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({
+                email: user.email
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                localStorage.setItem("accessToken",data.accessToken);
+                navigate(from, { replace: true });
+            });
+    }
     },[user]);
 
       if (loading ) {

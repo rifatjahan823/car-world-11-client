@@ -14,17 +14,6 @@ const AddInventory = () => {
         const result={picture,name,email:user?.email,price,quantity,}
 
 
-        fetch('http://localhost:5000/myInventory',{
-            method:"POST",
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify(result)
-        })
-        .then(res=>res.json())
-        .then(result=>{
-           
-        })
         fetch('http://localhost:5000/inventory',{
             method:"POST",
             headers:{
