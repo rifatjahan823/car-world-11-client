@@ -47,14 +47,13 @@ const MyInventory = () => {
             <div  className='container'> 
           <div  className='row g-4 my-3'> 
             {
-             (user.email)
-             ?inventory.map(inventory=><GetMannageInventory
+            
+             inventory.map(inventory=><GetMannageInventory
                 inventory={inventory}
                 key={inventory._id}
                 inventoryDelete={inventoryDelete}>
                 </GetMannageInventory>)
-                :
-                ""
+                
             }
           </div>
           </div>

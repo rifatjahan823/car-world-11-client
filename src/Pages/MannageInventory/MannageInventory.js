@@ -42,7 +42,7 @@ const MannageInventory = () => {
           
             </div>
           <div  className='container'> 
-          <div  className='row g-4 mt-3'> 
+          <div  className='row g-4 my-3'> 
             {
             
             inventories.map(inventory=><GetMannageInventory

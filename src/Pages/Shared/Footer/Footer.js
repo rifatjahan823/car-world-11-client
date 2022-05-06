@@ -16,7 +16,7 @@ const Footer = () => {
                        <p>I understand very well how lack of confidence can be an obstacle. That is why I dedicated myself to helping people overcome their fears and improve their looks - and their lives.</p>
                     </div>
                  {/* ----top footer part-2---- */}
-                    <div className='col-lg-5 col-md-6 col-sm-12 info-2 ms-lg-3'>
+                    <div className='col-lg-4 col-md-6 col-sm-12 info-2 ms-lg-3'>
                         <h5>Find us here</h5>
                         <p>USA, California 20, First Avenue, California</p>
                         <div className='my-3'>
@@ -25,13 +25,18 @@ const Footer = () => {
                         </div>
                         <p style={{color:"#84898b"}}>info@stylemixthemes.com</p>
                     </div>
+                 {/* ----top footer part-3---- */}
+                    <div className='col-lg-3 col-md-6 col-sm-12'>
+                        <h5>Newsletter</h5>
+                        <p>We support to customize minor request as javascript conflict, css issue, etc. Enjoy the ultimate web design themes. Every layout is super flexible, amazingly powerful and visual by nature.</p>
+                    </div>
                 </div>
             </div>
         </div>
          {/* footer bootom part */}
         <div className='footre-botton'>
          <div className='container'>
-         <p className='mt-2'>&copy;2020 Health Coach | Rifat Jahan for a Personal Trainer</p>
+         <p className='mt-2'>&copy;2020 Car World | Rifat Jahan for a Ware House</p>
          </div>
       </div>
         </div>

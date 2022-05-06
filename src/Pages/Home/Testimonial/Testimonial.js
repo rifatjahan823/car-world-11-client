@@ -3,7 +3,8 @@ import { Carousel } from 'react-bootstrap';
 import './Testimonial.css';
 import tesimonialimg1 from '../../../image/testimonial-img/01-testimonial-1 .jpg'
 import tesimonialimg2 from '../../../image/testimonial-img/02-testimonial-1.jpg'
-import tesimonialimg3 from '../../../image/testimonial-img/03-comment-1.jpg'
+import tesimonialimg3 from '../../../image/testimonial-img/03-comment-1.jpg';
+
 
 const Testimonial = () => {
     const [index, setIndex] = useState(0);
