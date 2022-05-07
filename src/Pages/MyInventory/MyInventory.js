@@ -16,7 +16,7 @@ const MyInventory = () => {
     useEffect(()=>{
        const getInventory =async ()=>{
         const email = user.email;
-        const url =(`http://localhost:5000/inventorys?email=${email}`);
+        const url =(`https://ancient-dawn-90111.herokuapp.com/inventorys?email=${email}`);
         try{
             const {data} = await axiosPrivate.get(url);
             setInventory(data);
@@ -35,7 +35,7 @@ const MyInventory = () => {
     const inventoryDelete = id =>{
         const proceed= window.confirm('are you sure');
         if(proceed){
-            fetch(`http://localhost:5000/inventory/${id}`,{
+            fetch(`https://ancient-dawn-90111.herokuapp.com/inventory/${id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())

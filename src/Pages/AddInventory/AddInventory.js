@@ -14,7 +14,7 @@ const AddInventory = () => {
         const result={picture,name,email:user?.email,price,quantity,}
 
 
-        fetch('http://localhost:5000/inventory',{
+        fetch('https://ancient-dawn-90111.herokuapp.com/inventory',{
             method:"POST",
             headers:{
                 'content-type':'application/json'

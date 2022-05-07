@@ -8,7 +8,7 @@ import thumnail from '../../image/Mannageinvetory-page-img/pexels-photo-120049.j
 const MannageInventory = () => {
     const [inventories,setInventories]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/inventory')
+        fetch('https://ancient-dawn-90111.herokuapp.com/inventory')
         .then(res=>res.json())
         .then(data=>setInventories(data))
     },[])
@@ -16,7 +16,7 @@ const MannageInventory = () => {
     const inventoryDelete = id =>{
         const proceed= window.confirm('are you sure');
         if(proceed){
-            fetch(`http://localhost:5000/inventory/${id}`,{
+            fetch(`https://ancient-dawn-90111.herokuapp.com/inventory/${id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())

@@ -25,7 +25,7 @@ const SocialLogin = () => {
           const email = user.user.email;
           console.log(email)
 
-          const url = 'http://localhost:5000/login';
+          const url = 'https://ancient-dawn-90111.herokuapp.com/login';
           fetch(url, {
             method: 'POST',
             body: JSON.stringify({

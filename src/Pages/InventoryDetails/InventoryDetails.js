@@ -8,7 +8,7 @@ const InventoryDetails = () => {
     const {Id}=useParams()
     const [inventory,setInventory]=useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/inventory/${Id}`)
+        fetch(`https://ancient-dawn-90111.herokuapp.com/inventory/${Id}`)
         .then(res=>res.json())
         .then(data=>setInventory(data))
     },[inventory])
@@ -19,7 +19,7 @@ const InventoryDetails = () => {
         const quantity= parseInt(event.target.number.value)+parseInt(inventory.quantity);
         const user = {quantity}
           //send data to the surver
-    fetch(`http://localhost:5000/inventorie/${Id}`, {
+    fetch(`https://ancient-dawn-90111.herokuapp.com/inventorie/${Id}`, {
         method: 'PUT', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const InventoryDetails = () => {
       const user = {quantity,sold };
    
         //send data to the surver
-  fetch(`http://localhost:5000/inventorie/${Id}`, {
+  fetch(`https://ancient-dawn-90111.herokuapp.com/inventorie/${Id}`, {
       method: 'PUT', // or 'PUT'
       headers: {
           'Content-Type': 'application/json',
