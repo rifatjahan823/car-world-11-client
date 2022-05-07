@@ -27,7 +27,9 @@ const GetInventory = ({inventory}) => {
          {/*------ quantity-part ------------*/} 
             {
             inventory.quantity<=0?
-            <p style={{color:"red",fontWeight: "600"}}>Sold Out</p>
+              <div className='quantity'>
+               <p style={{color:"red",fontWeight: "600"}}>Sold Out</p>
+              </div>
               :
              <div className='quantity'>
              <p>Quantity<br></br>{quantity}</p>

@@ -33,7 +33,7 @@ const Testimonial = () => {
             <img src={tesimonialimg1} alt="" />
             <div className='content'>
            <p>
-           I went back to stock Warehouse after a good experience with them when I user this warehoue fast time and I wasn't disappointed. 
+           I went back to stock Warehouse after a good experience with them.
             </p>
            </div>
             </div>

@@ -4,13 +4,19 @@ import GetInventory from '../GetInventory/GetInventory';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight} from '@fortawesome/free-solid-svg-icons';
 import './Inventory.css';
+import Loading from '../../Shared/Loading/Loading';
 
 const Inventory = () => {
+    const [spiner,setSpiner]=useState(false);
     const [inventories,setInventories]=useState([]);
     useEffect(()=>{
+        setSpiner(true)
         fetch('https://ancient-dawn-90111.herokuapp.com/inventory')
         .then(res=>res.json())
-        .then(data=>setInventories(data))
+        .then(data=>{setInventories(data)
+        setSpiner(false)}
+        )
+       
     },[])
     const navigate = useNavigate();
     const mannageInventory=()=>{
@@ -28,8 +34,13 @@ const Inventory = () => {
                 </div>
             </div>
           <div  className='container'>
-            <div className='row g-4'>
-            {
+            <div  className='row g-4'>
+              {
+                  spiner ? (
+                  <Loading></Loading>
+                  )
+                  
+                  :
                 inventories?.slice(0,6).map(inventory=><GetInventory
                 inventory={inventory}
                 key={inventory._id}

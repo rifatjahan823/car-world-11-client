@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner';
 import Inventory from '../Inventory/Inventory';
 import Welcome from '../Welcome/Welcome';
 import Testimonial from '../Testimonial/Testimonial';
+import WareHouseAds from '../../WarehouseAds/WareHouseAds';
 
 
 
@@ -18,6 +19,7 @@ const Home = () => {
            <FactArea></FactArea>
            <Service></Service>
            <Testimonial></Testimonial>
+           <WareHouseAds></WareHouseAds>
         </div>
     );
 };

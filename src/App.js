@@ -13,6 +13,7 @@ import Header from './Pages/Shared/Header/Header';
 import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
 
 function App() {
+
   return (
     <div>
         <Header></Header>
