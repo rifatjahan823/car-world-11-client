@@ -36,7 +36,8 @@ const InventoryDetails = () => {
 }
     const updateDeliver =event=>{
       const quantity = inventory.quantity-1;
-      const user = {quantity};
+      const sold = inventory.sold+1;
+      const user = {quantity,sold };
    
         //send data to the surver
   fetch(`http://localhost:5000/inventorie/${Id}`, {
@@ -91,6 +92,8 @@ const InventoryDetails = () => {
            <p>ID:{inventory._id}</p>
          {/*------  price ------------*/} 
          <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Price :</span> {inventory.price}</p> 
+         {/*------  sold ------------*/} 
+         <p style={{color:"black",fontWeight: "600"}}><span style={{fontSize:"14px",fontWeight: "700",color:"#8b8b8b",lineHeight:"1.2"}}>Sold:</span> {inventory.sold}</p> 
 
         {/*------ quantity ------------*/} 
         {
@@ -105,7 +108,14 @@ const InventoryDetails = () => {
            <p className='pt-2 ' style={{color:"#565656",fontSize: "14px",fontWeight: "600"}}>{inventory.description}</p>
         {/*------ button-part ------------*/}
          <div className='button text-start '>
-            <button onClick={updateDeliver}>Delivered<FontAwesomeIcon icon={faAngleDoubleRight} /></button>
+      
+          {     
+           inventory.quantity<=0?
+           <button disabled onClick={updateDeliver}>Delivered<FontAwesomeIcon icon={faAngleDoubleRight} /></button>
+           :
+           <button onClick={updateDeliver}>Delivered<FontAwesomeIcon icon={faAngleDoubleRight} /></button>
+          }
+      
           </div> 
         </div>  
         </div>    

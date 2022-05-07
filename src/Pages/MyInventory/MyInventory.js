@@ -1,28 +1,34 @@
 import React, { useEffect, useState } from 'react';
+import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faDeleteLeft,faEdit} from '@fortawesome/free-solid-svg-icons';
 import auth from '../../firebase.init';
 import thumnail from '../../image/Mannageinvetory-page-img/pexels-photo-120049.jpg'
-import axios from 'axios';
+import axiosPrivate from '../../api/axiosPrivate';
 
 const MyInventory = () => {
     const [user]= useAuthState(auth)
     const [inventory,setInventory]=useState([]);
+    const navigate = useNavigate();
 
     useEffect(()=>{
        const getInventory =async ()=>{
         const email = user.email;
         const url =(`http://localhost:5000/inventorys?email=${email}`);
-        const {data }= await axios.get(url,{
-            headers:{
-                authorization: `Bearer ${localStorage.getItem('accessToken')}`,
-             }
-        });
-        setInventory(data);
-       
+        try{
+            const {data} = await axiosPrivate.get(url);
+            setInventory(data);
         }
+        catch(error){
+            console.log(error.message);
+            if(error.response.status === 401 || error.response.status === 403){
+                signOut(auth);
+                navigate('/login')
+            }
+        }
+    }
         getInventory()
  },[user]);
  

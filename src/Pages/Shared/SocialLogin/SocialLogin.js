@@ -8,7 +8,6 @@ import google from '../../../image/social/google-icon-logo.png'
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
- 
     const navigate = useNavigate();
     let errorElement;
     if (error ) {
@@ -22,11 +21,15 @@ const SocialLogin = () => {
 
       useEffect(()=>{
         if(user){
+          console.log(user)
+          const email = user.user.email;
+          console.log(email)
+
           const url = 'http://localhost:5000/login';
           fetch(url, {
             method: 'POST',
             body: JSON.stringify({
-                email: user.email
+                email:email
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
