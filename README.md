@@ -4,7 +4,7 @@
 this website create for a warehouse.user esily stock their product in this website
 also use JWT for security.
 
-##  Features and Functionality
+##  Features 
 - Ware House Service
 - Home Page/Slider,Inventory,Service,Testimonials,animation
 - MannageInventory/All Inventory Item
