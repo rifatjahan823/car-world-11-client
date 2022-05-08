@@ -5,17 +5,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight} from '@fortawesome/free-solid-svg-icons';
 import './Inventory.css';
 import Loading from '../../Shared/Loading/Loading';
+import axios from 'axios';
 
 const Inventory = () => {
     const [spiner,setSpiner]=useState(false);
     const [inventories,setInventories]=useState([]);
     useEffect(()=>{
-        setSpiner(true)
-        fetch('http://ancient-dawn-90111.herokuapp.com/inventory')
-        .then(res=>res.json())
-        .then(data=>{setInventories(data)
-        setSpiner(false)}
-        )
+
+        try{
+            const getdata = async ()=>{
+                setSpiner(true)
+            const  {data} =await axios.get(`http://ancient-dawn-90111.herokuapp.com/inventory`);
+            setInventories(data)
+            setSpiner(false)
+            }
+            getdata()
+          }
+        
+          catch(error){
+                 console.error('Error:', error);
+               };
        
     },[])
     const navigate = useNavigate();
