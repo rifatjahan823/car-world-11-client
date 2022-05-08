@@ -13,13 +13,13 @@ const Inventory = () => {
     useEffect(()=>{
 
         try{
-            const getdata = async ()=>{
+            const getInventory = async ()=>{
                 setSpiner(true)
-            const  {data} =await axios.get(`https://ancient-dawn-90111.herokuapp.com/inventory`);
+            const  {data} = await axios.get(`https://ancient-dawn-90111.herokuapp.com/inventory`);
             setInventories(data)
             setSpiner(false)
             }
-            getdata()
+            getInventory()
           }
         
           catch(error){

@@ -34,7 +34,7 @@ const [quantity,setQuantity]=useState({});
 useEffect(()=>{
   try{
     const getdata = async ()=>{
-      const {data} =await axios.get(`https://ancient-dawn-90111.herokuapp.com/inventory/${Id}`);
+      const {data} =await axios.get(`https://ancient-dawn-90111.herokuapp.com/inventoryid/${Id}`);
       setInventory(data)
     }
     getdata()
