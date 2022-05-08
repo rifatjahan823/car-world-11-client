@@ -15,7 +15,7 @@ const Inventory = () => {
         try{
             const getdata = async ()=>{
                 setSpiner(true)
-            const  {data} =await axios.get(`http://ancient-dawn-90111.herokuapp.com/inventory`);
+            const  {data} =await axios.get(`https://ancient-dawn-90111.herokuapp.com/inventory`);
             setInventories(data)
             setSpiner(false)
             }
