@@ -35,7 +35,7 @@ const MyInventory = () => {
     const inventoryDelete = id =>{
         const proceed= window.confirm('are you sure');
         if(proceed){
-            fetch(`https://ancient-dawn-90111.herokuapp.com/inventory/${id}`,{
+            fetch(`https://ancient-dawn-90111.herokuapp.com/inventoryDelete/${id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())

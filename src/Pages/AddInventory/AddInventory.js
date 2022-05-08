@@ -17,7 +17,7 @@ const AddInventory = () => {
         const result={picture,name,email:user?.email,supplierName,price,quantity,sold,description}
 
 
-        fetch('https://ancient-dawn-90111.herokuapp.com/inventory',{
+        fetch('https://ancient-dawn-90111.herokuapp.com/inventoryPost',{
             method:"POST",
             headers:{
                 'content-type':'application/json'

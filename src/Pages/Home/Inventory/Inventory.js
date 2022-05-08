@@ -11,7 +11,7 @@ const Inventory = () => {
     const [inventories,setInventories]=useState([]);
     useEffect(()=>{
         setSpiner(true)
-        fetch('https://ancient-dawn-90111.herokuapp.com/inventory')
+        fetch('http://ancient-dawn-90111.herokuapp.com/inventory')
         .then(res=>res.json())
         .then(data=>{setInventories(data)
         setSpiner(false)}

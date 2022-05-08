@@ -4,57 +4,64 @@ import thumnail from '../../image/Mannageinvetory-page-img/pexels-photo-120049.j
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight} from '@fortawesome/free-solid-svg-icons';
 import './InventoryDetails.css'
+import axios from 'axios';
 
 const InventoryDetails = () => {
+const [quantity,setQuantity]=useState({});
+
     const {Id}=useParams()
-    const [inventory,setInventory]=useState([]);
-    useEffect(()=>{
-        fetch(`https://ancient-dawn-90111.herokuapp.com/inventory/${Id}`)
-        .then(res=>res.json())
-        .then(data=>setInventory(data))
-    },[inventory])
+    const [inventory,setInventory]=useState({});
+   
 
  //-----updatequantity for restock item---------
     const updateQuantity =event=>{
         event.preventDefault();
-        const quantity= parseInt(event.target.number.value)+parseInt(inventory.quantity);
-        const user = {quantity}
-          //send data to the surver
-    fetch(`https://ancient-dawn-90111.herokuapp.com/inventorie/${Id}`, {
-        method: 'PUT', // or 'PUT'
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
-        })
-        .then(response => response.json())
-        .then(data => {
-        
-        })
-        .catch((error) => {
-        console.error('Error:', error);
-        });
+        const getQuantity = inventory.quantity
+        try{
+          const getdata = async ()=>{
+            const res =await axios.put(`https://ancient-dawn-90111.herokuapp.com/restock/${Id}`,
+           {quantity,getQuantity}
+            );
+      
+          }
+          getdata()
+        }
+      
+        catch(error){
+               console.error('Error:', error);
+             };
 }
+useEffect(()=>{
+  try{
+    const getdata = async ()=>{
+      const {data} =await axios.get(`https://ancient-dawn-90111.herokuapp.com/inventory/${Id}`);
+      setInventory(data)
+    }
+    getdata()
+  }
+  catch(error){
+    console.error('Error:', error);
+  };
+
+},[inventory])
+//-------------------------------------------
     const updateDeliver =()=>{
       const quantity = inventory.quantity-1;
-      const sold = parseInt(inventory.sold+1);
-      const user = {quantity,sold };
-   
-        //send data to the surver
-  fetch(`https://ancient-dawn-90111.herokuapp.com/inventorie/${Id}`, {
-      method: 'PUT', // or 'PUT'
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(user),
-      })
-      .then(response => response.json())
-      .then(data => {
-      
-      })
-      .catch((error) => {
-      console.error('Error:', error);
-      });
+    const sold = parseInt(inventory.sold+1);
+  try{
+    const getdata = async ()=>{
+    const res =await axios.put(`https://ancient-dawn-90111.herokuapp.com/inventoryUpdate/${Id}`,
+      {quantity,sold}
+      );
+
+    }
+    getdata()
+  }
+
+  catch(error){
+         console.error('Error:', error);
+       };
+
    
 }
   const navigate = useNavigate();
@@ -115,7 +122,7 @@ const InventoryDetails = () => {
           </div> 
        {/* ------form part for restock items----------      */}
           <form className='resotck-form mt-3' onSubmit={updateQuantity}>
-          <input className='input' type="number"  name="number" id="" placeholder='Restock' required/>
+          <input onChange={event=>setQuantity(event.target.value)} className='input' type="number"  name="number" id="" placeholder='Restock' required/>
           <input className='submit' type="submit" value="Restock" />
           </form>
         </div>  
