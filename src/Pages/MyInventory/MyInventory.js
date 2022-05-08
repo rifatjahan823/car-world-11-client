@@ -7,7 +7,6 @@ import {faDeleteLeft,faEdit} from '@fortawesome/free-solid-svg-icons';
 import auth from '../../firebase.init';
 import thumnail from '../../image/Mannageinvetory-page-img/pexels-photo-120049.jpg'
 import axiosPrivate from '../../api/axiosPrivate';
-
 const MyInventory = () => {
     const [user]= useAuthState(auth)
     const [inventory,setInventory]=useState([]);
@@ -53,7 +52,6 @@ const MyInventory = () => {
              <h2 className='text-uppercase text-center fw-bolder'>My <span style={{color:"#FF5400"}}>inven</span>tories</h2>
             </div>
             <div  style={{borderTop:"5px solid #FF5400"}}>
-          
             </div>
             <div  className='container'> 
           <div  className='row g-4 my-3'> 

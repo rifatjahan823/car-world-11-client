@@ -16,7 +16,6 @@ const AddInventory = () => {
         const description = event.target.description.value;
         const result={picture,name,email:user?.email,supplierName,price,quantity,sold,description}
 
-
         fetch('https://ancient-dawn-90111.herokuapp.com/inventoryPost',{
             method:"POST",
             headers:{
@@ -29,7 +28,6 @@ const AddInventory = () => {
            
         })
     }; 
-
     return (
  
         <div className='mx-auto form-container px-3'>
@@ -72,7 +70,6 @@ const AddInventory = () => {
         Add Inventory
      </Button>
   </Form>
- 
   </div>
     );
 };
