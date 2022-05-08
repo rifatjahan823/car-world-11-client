@@ -92,3 +92,8 @@
         color: #6a4736;
     }
      }
+@media  only screen and (max-width:768) {
+    .quantity {
+        left: 42%;
+    }
+     }
